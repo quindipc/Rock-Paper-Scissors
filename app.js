@@ -1,4 +1,4 @@
-//PSEUDO CODE -- User should be able to click rock, paper, or scissors and the computer's choice should be generated
+//PSEUDO CODE -- User should be able to click rock, paper, or scissors and the computer's choice should be generated and a result should generate
 
 //define the elements first
 const computerChoiceDisplay = document.getElementById('computer-choice')
@@ -19,7 +19,7 @@ possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click
 
 //computer with have a random choice to compete against the user
 function generateComputerChoice () {
-    const randomNumber = (Math.random() * 3) + 1 
+    const randomNumber = (Math.random() * 3) + 1 //possibleChoices.length??? how to use this 
     
     if (randomNumber === 1) {
         computerChoice = 'rock'
@@ -33,7 +33,7 @@ function generateComputerChoice () {
       computerChoiceDisplay.innerHTML = computerChoice
 }
 
-//this funciton will be for who wins or loses: user or the computer
+//this function will be for who wins or loses: user or the computer
 function getResult() {
     if (computerChoice === userChoice) {
       result = 'its a draw!'
