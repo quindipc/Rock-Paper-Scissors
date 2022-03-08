@@ -19,18 +19,18 @@ possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click
 
 //computer with have a random choice to compete against the user
 function generateComputerChoice () {
-    const randomNumber = (Math.random() * 3) + 1 //possibleChoices.length??? how to use this 
-    
+    const randomNumber = Math.ceil((Math.random() * 3)) + 1 //possibleChoices.length??? how to use this 
     if (randomNumber === 1) {
-        computerChoice = 'rock'
+        computerChoice = 'rock';
       }
       if (randomNumber === 2) {
-        computerChoice = 'scissors'
+        computerChoice = 'scissors';
       }
       if (randomNumber === 3) {
-        computerChoice = 'paper'
+        computerChoice = 'paper';
       }
-      computerChoiceDisplay.innerHTML = computerChoice
+  
+      computerChoiceDisplay.innerHTML = computerChoice;
 }
 
 //this function will be for who wins or loses: user or the computer
